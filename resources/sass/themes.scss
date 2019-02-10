@@ -1,0 +1,49 @@
+
+$themes: (
+  beaker: (
+    backgroundColor: #F4FCFB,
+    textColor: #545756,
+    buttonTextColor: #545756,
+    buttonColor: #09FFAD,
+    sideNavColor: #545756,
+    topNavColor: #09FFAD,
+  ),
+  light: (
+    backgroundColor: #E4E5E4,
+    textColor: #212523,
+    buttonTextColor: #212523,
+    buttonColor: #F2F2F2,
+    sideNavColor: #C9C9C9,
+    topNavColor: #F2F2F2,
+  ),
+  dark: (
+    backgroundColor: #818181,
+    textColor: #ddd,
+    buttonTextColor: #212523,
+    buttonColor: #F4FCFB,
+    sideNavColor: #545756,
+    topNavColor: #212523,
+  ),
+);
+
+/*
+ * Implementation of themes
+ */
+@mixin themify($themes) {
+    @each $theme, $map in $themes {
+        .theme-#{$theme} & {
+            $theme-map: () !global;
+            @each $key, $submap in $map {
+                $value: map-get(map-get($themes, $theme), '#{$key}');
+                $theme-map: map-merge($theme-map, ($key: $value)) !global;
+            }
+            @content;
+            $theme-map: null !global;
+        }
+    }
+}
+
+@function themed($key) {
+    @return map-get($theme-map, $key);
+}
+
