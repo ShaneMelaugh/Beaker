@@ -29,9 +29,7 @@ Route::resource('projects', 'ProjectsController');
 
 Route::post('/projects/{project}/tasks', 'ProjectTasksController@store');
 Route::patch('/tasks/{task}', 'ProjectTasksController@update');
-
-
-
+Route::post('/tasks/{task}/answer', 'ProjectTasksController@answers');
 
 Auth::routes();
 

@@ -19,4 +19,6 @@ class Project extends Model
     {
     	$this->tasks()->create($task);
     }
+
+
 }
