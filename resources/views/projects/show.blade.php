@@ -32,12 +32,14 @@
         <form>
         @forelse ($task->answers as $answer)
           
-          {{ $answer->description }}
-          <li>
+          
+          <form method="POST" action="/tasks/{{ $task->completed }}/answer">
+            @csrf
+          <label>{{ $answer->description }}</label>
           <input type="checkbox" name="" value="">
-          </li>
+          </form>
         @empty
-          <li> No Answers yet </li>
+          <p> No Answers yet </p>
         @endforelse
 
         </form>
