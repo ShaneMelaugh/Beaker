@@ -13,20 +13,43 @@
 </p>
 
 @if ($project->tasks->count())
-<div class="task">
+<div class="">
   
   @foreach ($project->tasks as $task)
-
+<div class="task">
     <form method="POST" class="" action="/tasks/{{ $task->id }}">
       @method('PATCH')
       @csrf
-        <label class="checkbox" for="completed">
-
-          <input type="checkbox" class="" name="completed" onChange="this.form.submit()" {{ $task->completed ? 'checked' : ''}}>
+          <h3 type="checkbox" class="" name="questionName">
             {{ $task->description }}
-        </label>
-    </form>
+        </h3>
+        </form>
 
+        <br>
+        <label>Answers:</label>
+        <br>
+
+        <form>
+        @forelse ($task->answers as $answer)
+          
+          
+          <form method="POST" action="/tasks/{{ $task->completed }}/answer">
+            @csrf
+          <label>{{ $answer->description }}</label>
+          <input type="checkbox" name="" value="">
+          </form>
+        @empty
+          <p> No Answers yet </p>
+        @endforelse
+
+        </form>
+
+        <form method="POST" action="/tasks/{{ $task->id}}/answer">
+        @csrf
+        <input type="text" class="" name="answer">
+        </form>
+    
+</div>
   @endforeach
 </div>
 @endif
