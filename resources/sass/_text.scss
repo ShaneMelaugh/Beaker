@@ -1,0 +1,19 @@
+p {
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6, span {
+  @include themify($themes) {
+  font-family: 'Roboto Mono', monospace;
+    color: themed('acordianTextColor');
+  }
+}
+
+.logo1 {
+  @include themify($themes) {
+    fill: themed('acordianTextColor');
+    stroke: themed('acordianTextColor');
+  }
+}

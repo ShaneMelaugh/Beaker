@@ -15,7 +15,7 @@ Route::get('/', function () {
 	return view('welcome');
 });
 
-Route::resource('projects', 'ProjectsController');
+Route::resource('tests', 'TestsController');
 
 // ->middleware('can:update,project')
 
@@ -27,12 +27,19 @@ Route::resource('projects', 'ProjectsController');
 // Route::patch('/projects/{project}', 'ProjectsController@update');
 // Route::delete('/projects/{project}', 'ProjectsController@destroy');
 
-Route::post('/projects/{project}/tasks', 'ProjectTasksController@store');
-Route::patch('/tasks/{task}', 'ProjectTasksController@update');
-Route::post('/tasks/{task}/answer', 'ProjectTasksController@answers');
+Route::post('/tests/{test}/questions', 'TestQuestionsController@store');
+Route::patch('/questions/{question}', 'TestQuestionsController@update');
+Route::post('/questions/{question}/answer', 'TestQuestionsController@answers');
+Route::patch('/answer/{answer}', 'AnswerController@update');
+Route::get('/tests/{test}/takeTest', 'TestQuestionsController@takeTest');
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+Route::get('/theme', function() {
+	return view('theme');
+});

@@ -1,0 +1,107 @@
+@import "theme";
+
+.success {
+  @include themify($themes) {
+    background: themed('success') !important;
+    border: 3px solid themed('successHover');
+    color: themed('sideNavColor');
+    &:hover {
+      background: themed('successHover') !important;
+    }
+    &__border {
+      background-color: transparent;
+      border: 2px solid themed('success');
+      &:focus {
+        border: 2px solid themed('success');
+      }
+    }
+  }
+}
+
+.heading {
+  @include themify($themes) {
+    color: themed('topNavColor')l
+  }
+}
+
+.alert {
+  @include themify($themes) {
+    background: themed('alert') !important;
+    border: 3px solid themed('alertHover');
+    color: themed('topNavColor') !important;
+    &:hover {
+      background: themed('alertHover') !important;
+    }
+    &__border {
+      background-color: transparent;
+      border: 2px solid themed('alert');
+      &:focus {
+        border: 2px solid themed('alert');
+      }
+    }
+  }
+}
+
+.danger {
+  @include themify($themes) {
+    background: themed('danger') !important;
+    border: 3px solid themed('dangerHover');
+    color: themed('sideNavColor');
+    &:hover {
+      background: themed('danger') !important;
+    }
+    &__border {
+      background-color: transparent;
+      border: 2px solid themed('danger');
+      &:focus {
+        border: 2px solid themed('danger');
+      }
+    }
+  }
+}
+
+.default {
+  @include themify($themes) {
+    background: themed('default') !important;
+    border: 3px solid themed('defaultHover');
+    color: themed('sideNavColor');
+    &:hover {
+      background: themed('defaultHover') !important;
+    }
+    &__border {
+      background-color: transparent;
+      border: 2px solid themed('default');
+      &:focus {
+        border: 2px solid themed('default');
+      }
+    }
+  }
+}
+
+.beaker {
+  @include themify($themes) {
+    background: themed('beaker') !important;
+    border: 3px solid themed('beakerHover');
+    color: themed('sideNavColor');
+    &:hover {
+      background: themed('beaker') !important;
+    }
+    &__border {
+      background-color: transparent;
+      border: 2px solid themed('beaker');
+      &:focus {
+        border: 2px solid themed('beaker');
+      }
+    }
+  }
+}
+
+.app-container {
+  @include themify($themes) {
+    background-color: themed('backgroundColor');
+  }
+}
+
+$breakpoint-laptop: 1080px;
+$breakpoint-tablet: 820px;
+$breakpoint-phone: 500px;

@@ -1,0 +1,38 @@
+.input {
+  box-shadow: none;
+  background-color: transparent;
+  &:focus {
+    box-shadow: none;
+  }
+  &__textarea {
+    min-height: 150px;
+    resize: none;
+  }
+  &__button {
+    margin: 0;
+    height: 39px;
+  }
+  &__dropdown {
+    height: auto;
+  }
+  &__fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+    &--wrap {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+    &--title {
+      margin-bottom: 0.5em
+    }
+    &--item {
+    list-style: none;
+
+    }
+    &--checkbox {
+    margin: 0;
+    }
+  }
+}

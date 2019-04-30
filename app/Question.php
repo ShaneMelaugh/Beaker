@@ -4,18 +4,18 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Task extends Model
+class Question extends Model
 {
 	protected $guarded = [];
 
-    public function project()
+    public function test()
     {
-    	return $this->belongsTo(Project::class);
+    	return $this->belongsTo(Test::class);
     }
 
     public function answers()
     
     {
-    	return $this->hasMany(Answer::class, 'task_id');
+    	return $this->hasMany(Answer::class);
     }
 }

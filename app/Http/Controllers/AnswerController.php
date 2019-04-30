@@ -69,7 +69,17 @@ class AnswerController extends Controller
      */
     public function update(Request $request, Answer $answer)
     {
-        //
+
+        if ($request->completed =='on'){
+            $answer->completed = 1;
+            $answer->save();
+        } 
+        else{
+            $answer->completed = 0;
+            $answer->save();
+        } 
+
+        return redirect('/tests/'.$answer->question->test->id);
     }
 
     /**

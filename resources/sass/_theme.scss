@@ -1,0 +1,99 @@
+
+/*
+ * Theme definitions
+ */
+
+.switch {
+  width: 70px;
+}
+
+$themes: (
+        beaker: (
+                backgroundColor: #F4FCFB,
+                textColor: #F4FCFB,
+                acordianTextColor: #545756,
+                acordianDropDown: #EFEFEF,
+                buttonTextColor: #545756,
+                buttonColor: #09FFAD,
+                sideNavColor: #545756,
+                topNavColor: #09FFAD,
+                topNavHover: #51FFC5,
+
+                  beaker: #09FFAD,
+                  beakerHover: #51FFC5,
+                  success: #5BFF68,
+                  successHover: #86FF8F,
+                  alert: #f3fb45,
+                  alertHover: #fcff9b,
+                  danger: #FF6F6F,
+                  dangerHover: #F67F7F,
+                  default: #8CD2FF,
+                  defaultHover: #B1E1FF,
+        ),
+        light: (
+                backgroundColor: #EFEFEF,
+                textColor: #151515,
+                acordianTextColor: #151515,
+                acordianDropDown: #EFEFEF,
+                buttonTextColor: #151515,
+                buttonColor: #8D8D8D,
+                sideNavColor: #BDBDBD,
+                topNavColor: #C7C7C7,
+                topNavHover: #BDBDBD,
+
+                  beaker: #09FFAD,
+                  beakerHover: #51FFC5,
+                  success: #5BFF68,
+                  successHover: #86FF8F,
+                  alert: #f3fb45,
+                  alertHover: #fcff9b,
+                  danger: #FF6F6F,
+                  dangerHover: #F67F7F,
+                  default: #8CD2FF,
+                  defaultHover: #B1E1FF,
+        ),
+        dark: (
+                backgroundColor: #42424F,
+                textColor: #09FFAD,
+                acordianTextColor: #09FFAD,
+                acordianDropDown: #545756,
+                buttonTextColor: #212523,
+                buttonColor: #09FFAD,
+                sideNavColor: #373740,
+                topNavColor: #33333D,
+                topNavHover: #373740,
+
+                  beaker: #09FFAD,
+                  beakerHover: #51FFC5,
+                  success: #5BFF68,
+                  successHover: #86FF8F,
+                  alert: #f3fb45,
+                  alertHover: #fcff9b,
+                  danger: #FF6F6F,
+                  dangerHover: #F67F7F,
+                  default: #8CD2FF,
+                  defaultHover: #B1E1FF,
+        ),
+        
+);
+
+/*
+ * Implementation of themes
+ */
+@mixin themify($themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}

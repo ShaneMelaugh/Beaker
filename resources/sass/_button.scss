@@ -1,0 +1,59 @@
+@import "theme";
+
+.button {
+  @include themify($themes) {
+    padding: 0.85em 1.4em;
+    margin: 0.5em 0.2em;
+    color: #262626 !important;
+
+    &.small {
+      font-size: 0.7rem;
+    }
+    &.medium {
+      font-size: 0.9rem;
+    }
+    &.large {
+      font-size: 1.3rem;
+    }
+
+    &__icon {
+      user-select: none;
+    }
+
+    &.border {
+      background: transparent !important;
+    }
+    &__dropdown {
+      list-style: none;
+      text-align: right;
+      margin: 0;
+      &--wrap {
+        width: fit-content;
+        &--card {
+          margin: 0 0 0 auto;
+        }
+      }
+    }
+  }
+}
+
+.dropdownCard {
+  z-index: 2;
+  position: absolute;
+  padding: 0 20px;
+}
+
+#dropdownButton {
+  margin: 0 0 0 3px;
+  z-index: 2;
+  width: fit-content;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+

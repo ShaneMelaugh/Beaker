@@ -1,0 +1,56 @@
+.theme {
+	display: grid; 
+	grid-template-columns: 0.8fr 1.2fr;
+	height:100vh;
+
+	&__picker {
+	    border: 2px solid;
+	    padding: 10px;
+	    height: 90vh;
+	    overflow: scroll;
+	}
+
+	&__view {
+	    padding: 10px;
+	    height: 90vh;
+	    overflow: scroll;
+	}
+
+	&__item {
+	display: grid; 
+	grid-template-columns: 1.3fr 0.7fr;
+	width: 90%;
+	margin: 0 auto;
+		&--text {
+		    display: flex;
+	    	justify-content: center;
+	    	flex-direction: column;
+		}
+		&--img {
+			margin: 0 auto;
+		}
+	}
+}
+
+.text {
+	&__title {
+	display: flex;
+	align-items: center;
+	}
+
+	&__font {
+	margin: 0 10px 0 auto;
+	font-family: brandon-grotesque, sans-serif;
+	&--para {
+	margin: 0 10px 0 10px;
+	}
+	}
+
+	&__heading {
+
+	}
+
+	&__para {
+	padding: 10px;
+	}
+}

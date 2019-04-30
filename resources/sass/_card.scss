@@ -1,0 +1,29 @@
+@import "theme";
+
+.card {
+  @include themify($themes) {
+  border: 2px solid themed('sideNavColor');
+  &__title {
+    padding: 3px 20px;
+    background: themed('sideNavColor');
+    color: themed('sideNavColor');
+    &.with-button {
+      display: flex;
+      align-items: center;
+      z-index: 1;
+    }
+    &--heading {
+      font-size: 1.3rem;
+      margin: 0;
+    }
+  }
+  &__content {
+    padding: 10px 20px;
+  }
+  &__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+  }
+}

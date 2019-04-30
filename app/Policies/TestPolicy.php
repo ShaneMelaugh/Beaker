@@ -3,10 +3,10 @@
 namespace App\Policies;
 
 use App\User;
-use App\Project;
+use App\Test;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class ProjectPolicy
+class TestPolicy
 {
     use HandlesAuthorization;
 
@@ -17,8 +17,8 @@ class ProjectPolicy
      * @param  \App\Project  $project
      * @return mixed
      */
-    public function update(User $user, Project $project)
+    public function update(User $user, Test $test)
     {
-        return $project->owner_id == $user->id;
+        return $test->owner_id == $user->id;
     }
 }
