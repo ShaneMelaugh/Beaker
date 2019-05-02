@@ -4,16 +4,31 @@
 
 @section('content')
 
-      <div class="testwrap">
+      <div class="test">
 <!--         <button class="prev default"><</button>
         <button class="next default">></button> -->
           @foreach ($test->questions as $question)
-          <div class="questionwrap">
+          <div class="question__wrap">
           <h5 class="test__question" name="questionName">{{ $question->description }}</h5>
 
-            <div class="test__answers">
+            @foreach($question->answers as $answer)@endforeach
+
+            <form name="TestAnswer" class="test__answers" method="POST" action="/tests/{{ $test->id }}/results">
+            @csrf
             @foreach ($question->answers as $answer)
-              <button class="test__button">{{ $answer->description }}</button>
+              <button type="submit" name='testAnswer' class="test__button beaker border large button" value="{{ $answer->id }}">{{ $answer->description }}</button>
+              
+
+              @if ($answer->completed == 1)
+                <script>
+                console.log('answer is correct!');
+                </script>
+              @else 
+              <script>
+                console.log('wrong!');
+              </script>
+              @endif
+
             @endforeach
             </div>
 
@@ -21,33 +36,11 @@
 
           @endforeach
           <hr>
-      </div>
-  
+      </div>  
+
 @endsection
 
 <style>
-  .testwrap {
-    background: lightgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .questionwrap {
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .questionName {
-    text-align: center;
-    padding: 20px;
-  }
-
   .navbar__corner {
     display: none !important;
   }
@@ -63,11 +56,10 @@
   .content {
     margin: 0 !important;
     height: 100vh !important;
+    padding: 0 !important;
   }
 
   .cta {
     display: none !important;
   }
-
-
 </style>

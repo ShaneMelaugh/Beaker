@@ -42,5 +42,5 @@ class TestQuestionsController extends Controller
 
             //$realTest = Test::where('id', $test->id) ;
             return view('tests.takeTest', compact('test'));
-        }
+        }   
 }

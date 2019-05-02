@@ -68,7 +68,7 @@ class TestsController extends Controller
     public function destroy(Test $test) 
         {
             //abort_if(\Gate::denies('update', $test), 403);
-            $test->delete();
+            $test->destroy();
             return redirect('/tests');
         }
 

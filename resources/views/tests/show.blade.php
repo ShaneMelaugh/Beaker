@@ -4,12 +4,12 @@
 
 @section('content') 
 
-<h3>{{ $test->title }}</h3>
+<h3>{{ $test->title }}</h3><h3 class="questionCount"></h3>
 
 <p>{{ $test->description }}</p>
 
 <h6>
-  <a href="/tests/{{ $test->id }}/edit" class="button__dashboard">Edit</a>
+  <a href="/tests/{{ $test->id }}/edit" class="button beaker button__dashboard">Edit</a>
 </h6>
 
 @if ($test->questions->count())
@@ -20,14 +20,14 @@
     <form method="POST" class="accordion acordian" action="/questions/{{ $question->id }}">
       @method('PATCH')
       @csrf
-     <p name="questionName">{{ $question->description }}</p>
+     <p class="accordion__title" name="questionName">{{ $question->description }}</p>
      </form>
 
 
         <div class="accordion__panel">
         <div class="accordion__panel--content">
 
-        <label>Answers:</label>
+        <label>Answers:</label><label class="answerCount"></label>
         <form class="answer__wrap">
         @forelse ($question->answers as $answer)
           
@@ -35,10 +35,10 @@
           <form method="POST" id="{{$answer->id}}" class="answer__wrap" action="/answer/{{ $answer->id }}">
             @method('PATCH')
             @csrf
-          <label>{{ $answer->id}} {{ $answer->description }}</label>
-          <input type="checkbox" name="completed" class="answer__checkbox" onChange="this.form.submit()">
+          <label>{{ $answer->description }}</label>
+          <input type="checkbox" name="completed" class="answer__checkbox" onChange="this.form.submit()" {{ $answer->completed ? 'checked' : '' }}>
           </form>
-          <hr>
+          <hr class="accordion__hr">
 
         @empty
           <p> No Answers yet </p>
@@ -46,9 +46,11 @@
 
         </form>
 
-        <form method="POST" action="/questions/{{ $question->id }}/answer">
+        <form method="POST" class="input-group accordion__input" action="/questions/{{ $question->id }}/answer">
         @csrf
-        <input type="text" class="" name="answer">
+            <input class="input-group-field input beaker__border" name="answer" placeholder="new Question" type="text">
+            <div class="input-group-button">
+            <input type="submit" class="beaker input__button input__button accordion__input--button" value="Add">
         </form>
 
 </div>

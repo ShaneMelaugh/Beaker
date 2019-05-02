@@ -20,5 +20,10 @@ class Test extends Model
     	$this->questions()->create($question);
     }
 
+    public function results($result)
+    {
+    	$this->hasMany(Results::class);
+    }
+
 
 }

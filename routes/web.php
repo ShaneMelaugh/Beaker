@@ -32,6 +32,7 @@ Route::patch('/questions/{question}', 'TestQuestionsController@update');
 Route::post('/questions/{question}/answer', 'TestQuestionsController@answers');
 Route::patch('/answer/{answer}', 'AnswerController@update');
 Route::get('/tests/{test}/takeTest', 'TestQuestionsController@takeTest');
+Route::post('/tests/{test}/results', 'ResultsController@results');
 
 
 Auth::routes();
@@ -42,4 +43,8 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/theme', function() {
 	return view('theme');
+});
+
+Route::get('/welcome', function() {
+	return view('welcome');
 });

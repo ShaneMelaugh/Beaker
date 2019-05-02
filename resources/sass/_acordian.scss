@@ -9,7 +9,7 @@
   width: 100%;
   text-align: left;
   outline: none;
-  font-size: 15px;
+  font-size: 15px !important;
   transition: 0.4s;
   border: 2px solid themed('sideNavColor');
   display: flex;
@@ -36,10 +36,24 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    padding: 0 20px;
+    padding: 0 5px;
     &--content {
-      padding: 20px;
+      padding: 20px 5px;
     }
+  }
+  &__input {
+    width: 50%;
+    margin: 20px 0;
+    &--button {
+    padding: 0px 30px;
+    }
+  }
+
+  &__hr {
+    margin: 0;
+  }
+  &__title {
+  font-size: 15px;
   }
   }
 }

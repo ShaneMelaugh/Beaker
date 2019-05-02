@@ -48053,6 +48053,26 @@ $(document).ready(function () {
 //     console.log('next');
 //   $('.questionwrap').next().css( "display", "flex" );
 // });
+//   var correct = "{{$answer->completed}}";
+// $('.test__button').click(function(){
+//   if (correct == "1") {
+//     console.log('answer is correct!'); 
+//   } else {
+//     console.log('incorrect!');
+//   }
+// });
+
+$(".test__search").on("keyup", function () {
+  var value = $(this).val().toLowerCase();
+  $(".testWrap").filter(function () {
+    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+  });
+});
+var testItems = $('.testWrap').length;
+$('.testCount').append(testItems);
+var questionItems = $('.acordian').length;
+console.log(questionItems);
+$('.questionCount').append(questionItems + "Questions");
 
 /***/ }),
 

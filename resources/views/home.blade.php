@@ -1,20 +1,34 @@
-@extends('layout')
+@extends('loginLayout')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+<div class="">
+    <div class="">
+        <div class="">
+            <div class="">
 
-                <div class="card-body">
+                <div class="">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
 
-                    You are logged in!
+                    <div class="login__form">
+                        <div class="login__imgWrap">
+                            <img class="login__img login__success--img" src="../../images/tick.svg"/>
+                            <h5 class=login__success--heading>You're In! Let's get to work</h5>
+                        </div>
+
+                        <div class="login__section">
+                            <div class="login__buttonWrap">
+                                <button type="" class="button beaker login__button">
+                                    <a href="/">Dashboard</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
                 </div>
             </div>
         </div>

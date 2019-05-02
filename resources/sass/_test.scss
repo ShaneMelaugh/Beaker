@@ -1,5 +1,11 @@
 .test {
-	&__answers {
+@include themify($themes) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: themed('backgroundColor');
+    &__answers {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,5 +23,31 @@
 	padding: 20px;
 	margin: 20px;
 	width: 70%;
+	}
+
+	&__title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	}
+
+	&__heading {
+	font-weight: 600;
+	}
+
+	&__search {
+	max-width: 40%;
+    margin: 0 0 0 auto;
+	}
+		.question {
+		&__wrap {
+		height: 100vh;
+	    align-items: center;
+	    justify-content: center;
+	    display: flex;
+	    flex-direction: column;
+	    width: 100%;
+		}
+		}
 	}
 }

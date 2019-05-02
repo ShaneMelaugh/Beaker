@@ -10,28 +10,100 @@
 
 		<div class="theme__item">
 			<div class="theme__item--text">
-				<h3 class="theme__item--title">Light Theme</h3>
+				<h3 class="theme__item--title">Light</h3>
 				<p class="theme__item--para">A great theme for people who still use light theme for some ungodly reason, just ignore this and use dark please</p>
 			</div>
-			<img src="../img/logo.svg" class="theme__item--img"/>
+			<img src="../../images/light.svg" class="theme__item--img"/>
 		</div>
 		<hr>
 
 				<div class="theme__item">
 			<div class="theme__item--text">
-				<h3 class="theme__item--title">Dark Theme</h3>
+				<h3 class="theme__item--title">Darkness</h3>
 				<p class="theme__item--para">The perfect theme, you'd be insane to not choose this sweet thing</p>
 			</div>
-			<img src="../img/logo.svg" class="theme__item--img"/>
+			<img src="../../images/dark.svg" class="theme__item--img"/>
 		</div>
 		<hr>
 
 				<div class="theme__item">
 			<div class="theme__item--text">
-				<h3 class="theme__item--title">Beaker Theme</h3>
+				<h3 class="theme__item--title">Beaker</h3>
 				<p class="theme__item--para">The standard issue beans, a very normal theme that serves a very normal purpose</p>
 			</div>
-			<img src="../img/logo.svg" class="theme__item--img"/>
+			<img src="../../images/beaker.svg" class="theme__item--img"/>
+		</div>
+		<hr>
+
+				<div class="theme__item">
+			<div class="theme__item--text">
+				<h3 class="theme__item--title">Dyslexia #1</h3>
+				<p class="theme__item--para">The standard issue beans, a very normal theme that serves a very normal purpose</p>
+			</div>
+			<img src="../../images/beaker.svg" class="theme__item--img"/>
+		</div>
+		<hr>
+
+				<div class="theme__item">
+			<div class="theme__item--text">
+				<h3 class="theme__item--title">Dyslexia #2</h3>
+				<p class="theme__item--para">The standard issue beans, a very normal theme that serves a very normal purpose</p>
+			</div>
+			<img src="../../images/beaker.svg" class="theme__item--img"/>
+		</div>
+		<hr>
+
+				<div class="theme__item">
+			<div class="theme__item--text">
+				<h3 class="theme__item--title">Colourblind #1</h3>
+				<p class="theme__item--para">The standard issue beans, a very normal theme that serves a very normal purpose</p>
+			</div>
+			<img src="../../images/beaker.svg" class="theme__item--img"/>
+		</div>
+		<hr>
+
+				<div class="theme__item">
+			<div class="theme__item--text">
+				<h3 class="theme__item--title">Colourblind #2</h3>
+				<p class="theme__item--para">The standard issue beans, a very normal theme that serves a very normal purpose</p>
+			</div>
+			<img src="../../images/beaker.svg" class="theme__item--img"/>
+		</div>
+		<hr>
+
+				<div class="theme__item">
+			<div class="theme__item--text">
+				<h3 class="theme__item--title">Seaside Blue</h3>
+				<p class="theme__item--para">The standard issue beans, a very normal theme that serves a very normal purpose</p>
+			</div>
+			<img src="../../images/beaker.svg" class="theme__item--img"/>
+		</div>
+		<hr>
+
+				<div class="theme__item">
+			<div class="theme__item--text">
+				<h3 class="theme__item--title">Beans on Toast</h3>
+				<p class="theme__item--para">The standard issue beans, a very normal theme that serves a very normal purpose</p>
+			</div>
+			<img src="../../images/beaker.svg" class="theme__item--img"/>
+		</div>
+		<hr>
+
+				<div class="theme__item">
+			<div class="theme__item--text">
+				<h3 class="theme__item--title">Outrun</h3>
+				<p class="theme__item--para">The standard issue beans, a very normal theme that serves a very normal purpose</p>
+			</div>
+			<img src="../../images/beaker.svg" class="theme__item--img"/>
+		</div>
+		<hr>
+
+			<div class="theme__item">
+			<div class="theme__item--text">
+				<h3 class="theme__item--title">Vaporwave</h3>
+				<p class="theme__item--para">The standard issue beans, a very normal theme that serves a very normal purpose</p>
+			</div>
+			<img src="../../images/beaker.svg" class="theme__item--img"/>
 		</div>
 		<hr>
 		
