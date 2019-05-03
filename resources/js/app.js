@@ -94,6 +94,11 @@ $(document).ready(function(){
         $('#app-root').addClass('theme-beaker');
     });
 
+    $('#outrun').click(function(){
+        $('#app-root').removeClass();
+        $('#app-root').addClass('theme-outrun');
+    });
+
 });
 
 $(document).ready(function() {
@@ -162,4 +167,29 @@ $("#font-height-para").change(function() {
     console.log(questionItems);
   $('.questionCount').append(questionItems + "Questions");
 
+  //Scroll for Test
 
+$(document).ready(function () {
+
+    $('.scroll').click(function () {
+
+        var scrollWidth = window.innerWidth;
+        console.log(scrollWidth);
+        event.preventDefault();
+        $('body').animate({
+            scrollLeft: "+=" + scrollWidth
+        }, "slow");
+    });
+
+
+    $('.scroll2').click(function () {
+
+        var scrollWidth = window.innerWidth;
+        console.log(scrollWidth);
+        event.preventDefault();
+        $('body').animate({
+            scrollLeft: "-=" + scrollWidth
+        }, "slow");
+    });
+
+});

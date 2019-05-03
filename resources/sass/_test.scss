@@ -5,6 +5,10 @@
     align-items: center;
     flex-direction: column;
     background-color: themed('backgroundColor');
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    position: relative;
+    
     &__answers {
     display: flex;
     flex-direction: column;

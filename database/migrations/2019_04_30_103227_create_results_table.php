@@ -18,6 +18,9 @@ class CreateResultsTable extends Migration
             $table->timestamps();
             $table->unsignedInteger('owner_id');
             $table->unsignedInteger('answer_id');
+            $table->unsignedInteger('question_id');
+            $table->unsignedInteger('test_id');
+
         });
     }
 

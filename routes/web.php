@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-	return view('welcome');
-});
+Route::get('/', 'DashboardController@index');
 
 Route::resource('tests', 'TestsController');
 
@@ -43,8 +41,4 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/theme', function() {
 	return view('theme');
-});
-
-Route::get('/welcome', function() {
-	return view('welcome');
 });

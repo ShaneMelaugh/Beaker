@@ -1,0 +1,33 @@
+.dashboard {
+	display: grid;
+    align-items: normal;
+    justify-content: normal;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+
+	&__section {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+	}
+
+	&__testWrap {
+	overflow: scroll;
+	height: -webkit-fill-available;
+	}
+
+	&__tests {
+	display: flex;
+    align-items: center;
+    padding: 10px;
+
+    &--title {
+    	font-size: 1.1em;
+    }
+
+    &--link {
+    	margin: 0 0 0 auto;
+    	font-size: 1.4em;
+    }
+	}
+}

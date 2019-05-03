@@ -62,6 +62,7 @@
         <button class="switch" id="light">Light</button>
         <button class="switch" id="dark">dark</button>
         <button class="switch" id="beaker">beaker</button>
+        <button class="switch" id="outrun">outrun</button>
 
             </ul>
 

@@ -29,20 +29,32 @@ class ResultsController extends Controller
     	//$tests = Test::all();
     	//$users = User::all();
     	//$results = Results::all();
-    	$results = Results::where('owner_id', auth()->id())->get();
-    	$answers_id = $results->pluck('answer_id')->all();
+    	$results = Results::where([
+            ['owner_id', auth()->id()],
+            ['test_id', $test->id]
+        ])->get();
+    	
+        $answers_id = $results->pluck('answer_id')->all();
     	$answers = Answer::whereIn('id',$answers_id)->get();
-    	$questions_id = $answers->pluck('question_id')->all();
+        //dd($answers);
+    	
+        $questions_id = $answers->pluck('question_id')->all();
     	$questions = Question::whereIn('id',$questions_id)->get();
-    	dd($questions);
+        
+        // $tests_id = $questions->pluck('tests_id')->all();
+        // $tests = Test::whereIn('id',$tests_id)->get();
+
+        //$answers = Answer::whereIn('question_id',$answers_id)->get();
+    	$question = Answer::findOrFail(request('testAnswer'))->question;
+        //dd(request()->all());
     	Results::create([
-        	// 'test_id' => $test->id,
-        	// 'question_id' => $question->id,
+        	'test_id' => $test->id,
+        	'question_id' => $question->id,
         	'answer_id' => request('testAnswer'),
         	'owner_id'=> auth()->id(),
         ]);
         //dd(request());
-        return view('tests.results', compact('answers', 'results'));
+        return view('tests.results', compact('answers', 'results', 'questions'));
     }
 
     /**

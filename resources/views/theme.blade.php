@@ -10,7 +10,7 @@
 
 		<div class="theme__item">
 			<div class="theme__item--text">
-				<h3 class="theme__item--title">Light</h3>
+				<h3 class="theme__item--title">World of Light</h3>
 				<p class="theme__item--para">A great theme for people who still use light theme for some ungodly reason, just ignore this and use dark please</p>
 			</div>
 			<img src="../../images/light.svg" class="theme__item--img"/>
@@ -19,7 +19,7 @@
 
 				<div class="theme__item">
 			<div class="theme__item--text">
-				<h3 class="theme__item--title">Darkness</h3>
+				<h3 class="theme__item--title">The Long Night</h3>
 				<p class="theme__item--para">The perfect theme, you'd be insane to not choose this sweet thing</p>
 			</div>
 			<img src="../../images/dark.svg" class="theme__item--img"/>
@@ -91,7 +91,7 @@
 
 				<div class="theme__item">
 			<div class="theme__item--text">
-				<h3 class="theme__item--title">Outrun</h3>
+				<h3 class="theme__item--title">Cyberpunk</h3>
 				<p class="theme__item--para">The standard issue beans, a very normal theme that serves a very normal purpose</p>
 			</div>
 			<img src="../../images/beaker.svg" class="theme__item--img"/>

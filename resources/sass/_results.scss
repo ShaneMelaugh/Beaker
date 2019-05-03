@@ -1,0 +1,74 @@
+.results {
+@include themify($themes) {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 100vh;
+
+	&__answerWrap {
+		overflow: scroll;
+	}
+
+	&__header {
+		height: 60px;
+	}
+
+	&__answer {
+		height: 50px;
+	    display: flex;
+	    align-items: center;
+	    background: themed('topNavColor');
+	    width: 85%;
+	    padding: 0 20px;
+	    margin: 15px 10px;
+	    &--mark {
+	    	margin: 15px;
+	    	border-radius: 100px;
+	    	height: 50px;
+	    	width: 50px;
+	    	background: themed('topNavColor');
+	    }
+	    &--wrap {
+	    	display: flex;
+	    	align-items: center;
+	    }
+	}
+
+	&__statWrap {
+
+	}
+
+	&__info {
+	    display: flex;
+	    align-items: center;
+	    flex-direction: column;
+	    padding: 0 20px;
+	    margin: 15px 10px;
+
+	    &--heading {
+	    	margin: 15px;
+	    }
+	}
+
+	&__total {
+		background: themed('topNavColor');
+		width: 330px;
+    	height: 330px;
+    	border-radius: 500px;
+    	margin: 15px;
+	}
+
+	&__button {
+		
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		margin: 15px;
+	}
+
+
+	}
+}
