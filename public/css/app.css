@@ -1972,9 +1972,6 @@ svg {
   align-items: center;
   flex-direction: column;
   background-color: #F4FCFB;
-  overflow-x: hidden !important;
-  overflow-y: hidden !important;
-  position: relative;
 }
 
 .theme-beaker .test__answers {
@@ -1983,6 +1980,11 @@ svg {
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.theme-beaker .test__moveButtonNext {
+  position: absolute;
+  bottom: 0;
 }
 
 .theme-beaker .test__question {
@@ -2027,9 +2029,6 @@ svg {
   align-items: center;
   flex-direction: column;
   background-color: #EFEFEF;
-  overflow-x: hidden !important;
-  overflow-y: hidden !important;
-  position: relative;
 }
 
 .theme-light .test__answers {
@@ -2038,6 +2037,11 @@ svg {
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.theme-light .test__moveButtonNext {
+  position: absolute;
+  bottom: 0;
 }
 
 .theme-light .test__question {
@@ -2082,9 +2086,6 @@ svg {
   align-items: center;
   flex-direction: column;
   background-color: #42424F;
-  overflow-x: hidden !important;
-  overflow-y: hidden !important;
-  position: relative;
 }
 
 .theme-dark .test__answers {
@@ -2093,6 +2094,11 @@ svg {
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.theme-dark .test__moveButtonNext {
+  position: absolute;
+  bottom: 0;
 }
 
 .theme-dark .test__question {
@@ -2137,9 +2143,6 @@ svg {
   align-items: center;
   flex-direction: column;
   background-color: #261447;
-  overflow-x: hidden !important;
-  overflow-y: hidden !important;
-  position: relative;
 }
 
 .theme-outrun .test__answers {
@@ -2148,6 +2151,11 @@ svg {
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.theme-outrun .test__moveButtonNext {
+  position: absolute;
+  bottom: 0;
 }
 
 .theme-outrun .test__question {
@@ -2585,6 +2593,10 @@ svg {
   height: 50px;
   width: 50px;
   background: #09FFAD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
 }
 
 .theme-beaker .results__answer--wrap {
@@ -2610,6 +2622,14 @@ svg {
   height: 330px;
   border-radius: 500px;
   margin: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-beaker .results__total--number {
+  margin: 0;
+  text-align: center;
 }
 
 .theme-beaker .results__buttons {
@@ -2618,6 +2638,14 @@ svg {
   align-items: center;
   flex-direction: row;
   margin: 15px;
+}
+
+.theme-beaker .results .correct {
+  background: #09FFAD;
+}
+
+.theme-beaker .results .incorrect {
+  background: #FF6F6F;
 }
 
 .theme-light .results {
@@ -2650,6 +2678,10 @@ svg {
   height: 50px;
   width: 50px;
   background: #C7C7C7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
 }
 
 .theme-light .results__answer--wrap {
@@ -2675,6 +2707,14 @@ svg {
   height: 330px;
   border-radius: 500px;
   margin: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-light .results__total--number {
+  margin: 0;
+  text-align: center;
 }
 
 .theme-light .results__buttons {
@@ -2683,6 +2723,14 @@ svg {
   align-items: center;
   flex-direction: row;
   margin: 15px;
+}
+
+.theme-light .results .correct {
+  background: #C7C7C7;
+}
+
+.theme-light .results .incorrect {
+  background: #FF6F6F;
 }
 
 .theme-dark .results {
@@ -2715,6 +2763,10 @@ svg {
   height: 50px;
   width: 50px;
   background: #33333D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
 }
 
 .theme-dark .results__answer--wrap {
@@ -2740,6 +2792,14 @@ svg {
   height: 330px;
   border-radius: 500px;
   margin: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-dark .results__total--number {
+  margin: 0;
+  text-align: center;
 }
 
 .theme-dark .results__buttons {
@@ -2748,6 +2808,14 @@ svg {
   align-items: center;
   flex-direction: row;
   margin: 15px;
+}
+
+.theme-dark .results .correct {
+  background: #33333D;
+}
+
+.theme-dark .results .incorrect {
+  background: #FF6F6F;
 }
 
 .theme-outrun .results {
@@ -2780,6 +2848,10 @@ svg {
   height: 50px;
   width: 50px;
   background: #2DE2E6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
 }
 
 .theme-outrun .results__answer--wrap {
@@ -2805,6 +2877,14 @@ svg {
   height: 330px;
   border-radius: 500px;
   margin: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-outrun .results__total--number {
+  margin: 0;
+  text-align: center;
 }
 
 .theme-outrun .results__buttons {
@@ -2813,6 +2893,14 @@ svg {
   align-items: center;
   flex-direction: row;
   margin: 15px;
+}
+
+.theme-outrun .results .correct {
+  background: #2DE2E6;
+}
+
+.theme-outrun .results .incorrect {
+  background: #0C0221;
 }
 
 .dashboard {

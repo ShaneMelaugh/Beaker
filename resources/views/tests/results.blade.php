@@ -13,15 +13,12 @@
       <div class="results__answerWrap">
           @foreach ($answers as $answer)
           <section class="results__answer--wrap">
-          	<div class="results__answer">
-          	<p>{{ $answer->description }}</p>
-          	  @if ($answer->completed == 1)
-          	  <style>.results__answer {background-color: red;}</style>
-              @else 
-              <style>.results__answer {background-color: green;}</style>
-              @endif
+          	<div id="{{ $answer->completed }}" class="results__answer">
+          	<p class="results__answer--heading">{{ $answer->description }}</p>
           	</div>
-          <div class="results__answer--mark"></div>
+          <div class="results__answer--mark">
+            <p>{{ $answer->completed }}</p>
+          </div>
           </section>
           @endforeach
       </div>
@@ -30,7 +27,8 @@
 	      	<div class="results__info">
 	      		<h3 class="results__info--heading">Your Result is:</h3>
 	      		<div class="results__total">
-	      			
+              @foreach($results as $result)@endforeach
+              <h2 class="results__total--number"></h2>
 	      		</div>
 	      		<div class="results__buttons">
 	      			<button class="button beaker results__button">Return to Dashboard</button>

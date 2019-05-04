@@ -163,33 +163,51 @@ $("#font-height-para").change(function() {
   var testItems = $('.testWrap').length;
   $('.testCount').append(testItems);
 
+    var resultsItems = $('.results__answer').length;
+  $('.results__total--number').append(resultsItems);
+
     var questionItems = $('.acordian').length;
     console.log(questionItems);
   $('.questionCount').append(questionItems + "Questions");
 
   //Scroll for Test
 
-$(document).ready(function () {
+                // $(document).ready(function(){
+                //   $('.results__answer').addClass('incorrect');
+                //   $('.results__answer--mark').html('<i class="far fa-times-circle"></i>');
+                //   console.log('wrong');
+                // });
 
-    $('.scroll').click(function () {
+                // $(document).ready(function(){
+                // $(".result__answer").each(function() {
+                // if (!$(this).attr("id") == "0") {
+                // $(this).find(".results__answer").addClass("incorrect");
+                //     }
+                // });
+                // });
 
-        var scrollWidth = window.innerWidth;
-        console.log(scrollWidth);
-        event.preventDefault();
-        $('body').animate({
-            scrollLeft: "+=" + scrollWidth
-        }, "slow");
-    });
+                // $(document).ready(function(){
+                // $('.results__answer').filter(function(){
+                // return $(this).has('#0').length > 0
+                // }).each(function(){
+                // $(this).addClass('incorrect');
+                // });
+                // });
+
+                $(document).ready(function() {
+                if ($('.results__answer').attr("id") == "1") {
+                  console.log('correct');
+                $('.results__answer').addClass('correct');
+                } 
+                else {
+                  console.log('incorrect');
+                $('.results__answer').addClass('incorrect');
+                }
+                });
 
 
-    $('.scroll2').click(function () {
 
-        var scrollWidth = window.innerWidth;
-        console.log(scrollWidth);
-        event.preventDefault();
-        $('body').animate({
-            scrollLeft: "-=" + scrollWidth
-        }, "slow");
-    });
 
-});
+
+
+

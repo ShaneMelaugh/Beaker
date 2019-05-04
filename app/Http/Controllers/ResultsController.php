@@ -33,6 +33,7 @@ class ResultsController extends Controller
             ['owner_id', auth()->id()],
             ['test_id', $test->id]
         ])->get();
+        //dd($results);
     	
         $answers_id = $results->pluck('answer_id')->all();
     	$answers = Answer::whereIn('id',$answers_id)->get();
@@ -54,7 +55,7 @@ class ResultsController extends Controller
         	'owner_id'=> auth()->id(),
         ]);
         //dd(request());
-        return view('tests.results', compact('answers', 'results', 'questions'));
+        return view('tests.results', compact('answers', 'results', 'questions', 'users'));
     }
 
     /**
