@@ -10,9 +10,9 @@
 
         {{ csrf_field() }}
 
-        <input class="input beaker__border {{ $errors->has('title') ? 'danger__border' : '' }}" type="text" name="title" value="{{ old('title') }}">
+        <input class="input beaker__border input__color {{ $errors->has('title') ? 'danger__border' : '' }}" type="text" name="title" value="{{ old('title') }}">
         <br/>
-        <textarea class="input input__textarea beaker__border" name="description">{{ old('description') }}</textarea>
+        <textarea class="input input__textarea beaker__border input__color" name="description">{{ old('description') }}</textarea>
         <br/>
         <button type="submit" class="button success">Create Test</button>
       </form>

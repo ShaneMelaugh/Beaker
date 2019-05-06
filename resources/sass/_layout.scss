@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto Mono', monospace !important;
   background: #F4FCFB;
 }
 
@@ -65,14 +64,16 @@ body {
   position: fixed;
 
   &__logo {
+    @include themify($themes) {
     display: flex;
     justify-content: center;
+    fill: themed('sideNavColor');
 
     &--img {
       width: 60%;
       margin: 30px 0 0 0;
     }
-
+}
   }
 
   &__rule {

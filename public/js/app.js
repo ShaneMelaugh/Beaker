@@ -48010,24 +48010,40 @@ $(document).ready(function () {
   $('#dark').click(function () {
     $('#app-root').removeClass();
     $('#app-root').addClass('theme-dark');
+    localStorage.clear();
+    localStorage.setItem('theme', ['theme-dark']);
+    localStorage.getItem('theme');
   });
   $('#light').click(function () {
     $('#app-root').removeClass();
     $('#app-root').addClass('theme-light');
+    localStorage.clear();
+    localStorage.setItem('theme', ['theme-light']);
+    localStorage.getItem('theme');
   });
   $('#beaker').click(function () {
     $('#app-root').removeClass();
     $('#app-root').addClass('theme-beaker');
+    localStorage.clear();
+    localStorage.setItem('theme', ['theme-beaker']);
+    localStorage.getItem('theme');
   });
   $('#outrun').click(function () {
     $('#app-root').removeClass();
     $('#app-root').addClass('theme-outrun');
+    localStorage.clear();
+    localStorage.setItem('theme', ['theme-outrun']);
+    localStorage.getItem('theme');
   });
+  var localItem = localStorage.getItem('theme');
+  $('body').addClass(localItem);
 });
 $(document).ready(function () {
   $("#font-choice").change(function () {
     //alert($(this).val());
     $('.text__heading').css("font-family", $(this).val());
+    localStorage.setItem('font', [$(this).val()]);
+    localStorage.getItem('font');
   });
   $("#font-weight").change(function () {
     //alert($(this).val());
@@ -48049,6 +48065,21 @@ $(document).ready(function () {
     //alert($(this).val());
     $('.text__para').css("line-height", $(this).val());
   });
+  var localFont = localStorage.getItem('font');
+  $('h1').css('font-family', localFont);
+  $('h2').css('font-family', localFont);
+  $('h3').css('font-family', localFont);
+  $('h4').css('font-family', localFont);
+  $('h5').css('font-family', localFont);
+  $('h6').css('font-family', localFont);
+  $('p').css('font-family', localFont);
+  $('button').css('font-family', localFont);
+  $('span').css('font-family', localFont);
+  $('input').css('font-family', localFont);
+  $('label').css('font-family', localFont);
+  $('ul').css('font-family', localFont);
+  $('li').css('font-family', localFont);
+  $('a').css('font-family', localFont);
 }); // $('.prev').click(function(){
 //   console.log('hello');
 //   $('.questionwrap').next().css( "display", "none" );
@@ -48107,6 +48138,22 @@ $(document).ready(function () {
     console.log('incorrect');
     $('.results__answer').addClass('incorrect');
   }
+});
+$(doucment).ready(function () {
+  $("#test-answers").submit(function (stay) {
+    var formdata = $(this).serialize(); // here $(this) refere to the form its submitting
+
+    $.ajax({
+      type: 'POST',
+      url: "/tests/{{ $test->id }}/results",
+      data: formdata,
+      // here $(this) refers to the ajax object not form
+      success: function success(data) {
+        alert();
+      }
+    });
+    stay.preventDefault();
+  });
 });
 
 /***/ }),

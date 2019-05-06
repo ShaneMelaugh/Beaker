@@ -9,6 +9,9 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 20px;
+		&--section {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__testWrap {

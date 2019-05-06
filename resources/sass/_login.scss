@@ -1,7 +1,6 @@
 .login {
 	height: 100vh;
 	width: 100%;
-	@include themify($themes) {
     background-image: url("../img/banner.jpg"); /* W3C */
     background-repeat: no-repeat;
     background-position: top left;
@@ -18,7 +17,7 @@
 	    left: 0;
 	    right: 0;
 	    z-index: -2;
-	    background-color: themed('topNavColor');
+	    background-color: #09FFAD;
     }
     &__form {
 	    background: #F4FCFB;
@@ -92,6 +91,4 @@
     	}
 
     }
-
-	}
 }

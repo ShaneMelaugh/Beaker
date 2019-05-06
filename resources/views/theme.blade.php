@@ -8,13 +8,15 @@
 <div class="theme">
 	<section class="theme__picker">
 
-		<div class="theme__item">
+		<form method="POST" class="theme__item" action="/theme">
+			@method('PATCH')
+            @csrf
 			<div class="theme__item--text">
 				<h3 class="theme__item--title">World of Light</h3>
 				<p class="theme__item--para">A great theme for people who still use light theme for some ungodly reason, just ignore this and use dark please</p>
 			</div>
-			<img src="../../images/light.svg" class="theme__item--img"/>
-		</div>
+			<button type="submit" id="theme-light" name="theme-light"><img src="../../images/light.svg" class="theme__item--img"/></button>
+		</form>
 		<hr>
 
 				<div class="theme__item">

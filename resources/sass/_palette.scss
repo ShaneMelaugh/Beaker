@@ -2,17 +2,17 @@
 
 .success {
   @include themify($themes) {
-    background: themed('success') !important;
-    border: 3px solid themed('successHover');
-    color: themed('sideNavColor');
+    background: themed('buttonSuccessColor') !important;
+    border: 3px solid themed('buttonBorderColor');
+    color: themed('buttonTextColor');
     &:hover {
-      background: themed('successHover') !important;
+      background: themed('buttonDefaultColor') !important;
     }
     &__border {
       background-color: transparent;
-      border: 2px solid themed('success');
+      border: 2px solid themed('buttonBorderColor');
       &:focus {
-        border: 2px solid themed('success');
+        border: 2px solid themed('buttonBorderColor');
       }
     }
   }
@@ -20,23 +20,23 @@
 
 .heading {
   @include themify($themes) {
-    color: themed('topNavColor')l
+    color: themed('topNavColor')
   }
 }
 
 .alert {
   @include themify($themes) {
-    background: themed('alert') !important;
-    border: 3px solid themed('alertHover');
-    color: themed('topNavColor') !important;
+    background: themed('buttonAlertColor') !important;
+    border: 3px solid themed('buttonBorderColor');
+    color: themed('buttonTextColor') !important;
     &:hover {
-      background: themed('alertHover') !important;
+      background: themed('buttonAlertColor') !important;
     }
     &__border {
       background-color: transparent;
-      border: 2px solid themed('alert');
+      border: 2px solid themed('buttonBorderColor');
       &:focus {
-        border: 2px solid themed('alert');
+        border: 2px solid themed('buttonBorderColor');
       }
     }
   }
@@ -44,17 +44,17 @@
 
 .danger {
   @include themify($themes) {
-    background: themed('danger') !important;
-    border: 3px solid themed('dangerHover');
-    color: themed('sideNavColor');
+    background: themed('buttonDangerColor') !important;
+    border: 3px solid themed('buttonBorderColor');
+    color: themed('buttonTextColor');
     &:hover {
-      background: themed('danger') !important;
+      background: themed('buttonBorderColor') !important;
     }
     &__border {
       background-color: transparent;
-      border: 2px solid themed('danger');
+      border: 2px solid themed('buttonBorderColor');
       &:focus {
-        border: 2px solid themed('danger');
+        border: 2px solid themed('buttonBorderColor');
       }
     }
   }
@@ -62,17 +62,17 @@
 
 .default {
   @include themify($themes) {
-    background: themed('default') !important;
+    background: themed('buttonDefaultColor') !important;
     border: 3px solid themed('defaultHover');
-    color: themed('sideNavColor');
+    color: themed('buttonTextColor');
     &:hover {
-      background: themed('defaultHover') !important;
+      background: themed('buttonDefaultColor') !important;
     }
     &__border {
       background-color: transparent;
-      border: 2px solid themed('default');
+      border: 2px solid themed('buttonBorderColor');
       &:focus {
-        border: 2px solid themed('default');
+        border: 2px solid themed('buttonBorderColor');
       }
     }
   }
@@ -80,17 +80,17 @@
 
 .beaker {
   @include themify($themes) {
-    background: themed('beaker') !important;
-    border: 3px solid themed('beakerHover');
-    color: themed('sideNavColor');
+    background: themed('buttonBeakerColor') !important;
+    border: 3px solid themed('buttonBorderColor');
+    color: themed('buttonTextColor');
     &:hover {
-      background: themed('beaker') !important;
+      background: themed('buttonBeakerColor') !important;
     }
     &__border {
       background-color: transparent;
-      border: 2px solid themed('beaker');
+      border: 2px solid themed('buttonBorderColor');
       &:focus {
-        border: 2px solid themed('beaker');
+        border: 2px solid themed('buttonBorderColor');
       }
     }
   }
@@ -98,7 +98,7 @@
 
 .app-container {
   @include themify($themes) {
-    background-color: themed('backgroundColor');
+    background-color: themed('background');
   }
 }
 

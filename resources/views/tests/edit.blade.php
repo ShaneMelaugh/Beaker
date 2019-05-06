@@ -9,9 +9,9 @@
         @method('PATCH')
         @csrf
 
-        <input type="text" class="input beaker__border" name="title" pladeholder="Test Title" value="{{ $test->title }}">
+        <input type="text" class="input beaker__border input__color" name="title" pladeholder="Test Title" value="{{ $test->title }}">
         <br/>
-        <textarea name="description" class="input input__textarea beaker__border" placeholder="Test Description">{{ $test->description }}</textarea>
+        <textarea name="description" class="input input__textarea beaker__border input__color" placeholder="Test Description">{{ $test->description }}</textarea>
         <br/>
         <button type="submit" class="button success">Update Test</button>
       </form>

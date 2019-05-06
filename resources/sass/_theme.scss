@@ -9,99 +9,332 @@
 
 $themes: (
         beaker: (
-                backgroundColor: #F4FCFB,
-                textColor: #F4FCFB,
-                acordianTextColor: #545756,
-                acordianDropDown: #EFEFEF,
-                buttonTextColor: #545756,
-                buttonColor: #09FFAD,
-                buttonBorderColor: #09FFAD,
-                sideNavColor: #545756,
-                topNavColor: #09FFAD,
-                topNavHover: #51FFC5,
 
-                  beaker: #09FFAD,
-                  beakerHover: #51FFC5,
-                  success: #5BFF68,
-                  successHover: #86FF8F,
-                  alert: #f3fb45,
-                  alertHover: #fcff9b,
-                  danger: #FF6F6F,
-                  dangerHover: #F67F7F,
-                  default: #8CD2FF,
-                  defaultHover: #B1E1FF,
+          /* background */
+
+            background: #F4FCFB,
+            textColor: #545756,
+
+          /* CTA */ 
+
+            ctaBorder: #545756,
+            ctaBackground: #09FFAD,
+            ctaIcon: #545756,
+
+          /* Navbar Colors */
+
+            topNavColor: #09FFAD,
+            sideNavColor: #545756,
+            navTopLogo: #545756, 
+            sideNavLogo: #09FFAD, 
+            sideNavTextColor: #F4FCFB,
+            topNavTextColor: #545756, 
+
+            /* Button Colors */
+
+              buttonBorderColor: #545756,
+              buttonTextColor: #545756,
+
+              buttonDefaultColor: #8CD2FF,
+              buttonDefaultColorHover: #8CF0FF,
+              buttonDefaultTextHover: #545756,
+
+              buttonDangerColor: #FF6F6F,
+              buttonDangerColorHover: #FF8888,
+              buttonDangerTextHover: #545756,
+
+              buttonSuccessColor: #09FFAD,
+              buttonSuccessColorHover: #A2FFE0,
+              buttonSuccessTextHover: #545756,
+
+              buttonAlertColor: #F4FF96,
+              buttonAlertColorHover: #F9FFC0,
+              buttonAlertTextHover: #545756,
+
+              buttonBeakerColor: #09FFAD,
+              buttonBeakerColorHover: #A2FFE0,
+              buttonBeakerTextHover: #545756,
+
+            /* Input Colors */
+
+              inputBorderColor: #545756,
+              inputTextColor: #545756,
+              inputFillColor: transparent,
+
+            /* Acordian */
+
+              acordianBorderColor: #545756,
+              acordianBackgroundColorTop: #09FFAD,
+              acordianBackgroundHoverTop: #A2FFE0,
+              acordianBodyColor: #E2EBEA,
+              acordianBodyTextColor: #545756,
+              acordianTitleTextColor: #545756,
+
+            /* Cards */
+
+              cardHeaderColor: #545756,
+              cardBorderColor: #545756,
+              cardHeaderTextColor: #F4FCFB,
+              cardBackground: #E2EBEA,
+              cardBodyTextColor: #545756,
+
+            /* Results */
+
+              answerBox: #09FFAD,
+              answerBoxBorder: #545756,
+              answerBoxTextColor: #545756,
+              answerCircle: #09FFAD,
+              answerCircleBorder: #545756,
+              answerCircleTextColor: #545756,
+              resultCircle: #09FFAD, 
+              resultCircleTextColor: #545756,
         ),
+
         light: (
-                backgroundColor: #EFEFEF,
-                textColor: #151515,
-                acordianTextColor: #151515,
-                acordianDropDown: #EFEFEF,
-                buttonTextColor: #151515,
-                buttonColor: #8D8D8D,
-                buttonBorderColor: #09FFAD,
-                sideNavColor: #BDBDBD,
-                topNavColor: #C7C7C7,
-                topNavHover: #BDBDBD,
 
-                  beaker: #09FFAD,
-                  beakerHover: #51FFC5,
-                  success: #5BFF68,
-                  successHover: #86FF8F,
-                  alert: #f3fb45,
-                  alertHover: #fcff9b,
-                  danger: #FF6F6F,
-                  dangerHover: #F67F7F,
-                  default: #8CD2FF,
-                  defaultHover: #B1E1FF,
+          /* background */
+
+            background: #EFEFEF,
+            textColor: #121212,
+
+          /* CTA */ 
+
+            ctaBorder: #BDBDBD,
+            ctaBackground: #EFEFEF,
+            ctaIcon: #BDBDBD,
+
+          /* Navbar Colors */
+
+            topNavColor: #C7C7C7,
+            sideNavColor: #BDBDBD,
+            navTopLogo: #151515, 
+            sideNavLogo: #151515, 
+            sideNavTextColor: #151515,
+            topNavTextColor: #151515, 
+
+            /* Button Colors */
+
+              buttonBorderColor: #151515,
+              buttonTextColor: #151515,
+
+              buttonDefaultColor: #8CD2FF,
+              buttonDefaultColorHover: #8CF0FF,
+              buttonDefaultTextHover: #151515,
+
+              buttonDangerColor: #FF6F6F,
+              buttonDangerColorHover: #FF8888,
+              buttonDangerTextHover: #151515,
+
+              buttonSuccessColor: #09FFAD,
+              buttonSuccessColorHover: #A2FFE0,
+              buttonSuccessTextHover: #151515,
+
+              buttonAlertColor: #F4FF96,
+              buttonAlertColorHover: #F9FFC0,
+              buttonAlertTextHover: #151515,
+
+              buttonBeakerColor: #09FFAD,
+              buttonBeakerColorHover: #A2FFE0,
+              buttonBeakerTextHover: #151515,
+
+            /* Input Colors */
+
+              inputBorderColor: #151515,
+              inputTextColor: #151515,
+              inputFillColor: transparent,
+
+            /* Acordian */
+
+              acordianBorderColor: #151515,
+              acordianBackgroundColorTop: #BDBDBD,
+              acordianBackgroundHoverTop: #CDCACA,
+              acordianBodyColor: #EFEFEF,
+              acordianBodyTextColor: #151515,
+              acordianTitleTextColor: #151515,
+
+            /* Cards */
+
+              cardHeaderColor: #BDBDBD,
+              cardBorderColor: #BDBDBD,
+              cardHeaderTextColor: #151515,
+              cardBackground: #EFEFEF,
+              cardBodyTextColor: #151515,
+
+            /* Results */
+
+              answerBox: #C7C7C7,
+              answerBoxBorder: #151515,
+              answerBoxTextColor: #151515,
+              answerCircle: #C7C7C7,
+              answerCircleBorder: #151515,
+              answerCircleTextColor: #151515,
+              resultCircle: #C7C7C7, 
+              resultCircleTextColor: #151515,
         ),
-        dark: (
-                backgroundColor: #42424F,
-                textColor: #09FFAD,
-                acordianTextColor: #09FFAD,
-                acordianDropDown: #545756,
-                buttonTextColor: #212523,
-                buttonColor: #09FFAD,
-                buttonBorderColor: #09FFAD,
-                sideNavColor: #373740,
-                topNavColor: #33333D,
-                topNavHover: #373740,
 
-                  beaker: #09FFAD,
-                  beakerHover: #51FFC5,
-                  success: #5BFF68,
-                  successHover: #86FF8F,
-                  alert: #f3fb45,
-                  alertHover: #fcff9b,
-                  danger: #FF6F6F,
-                  dangerHover: #F67F7F,
-                  default: #8CD2FF,
-                  defaultHover: #B1E1FF,
+        dark: (
+
+          /* background */
+
+            background: #42424F,
+            textColor: #09FFAD,
+
+          /* CTA */ 
+
+            ctaBorder: #33333D,
+            ctaBackground: #545756,
+            ctaIcon: #09FFAD,
+
+          /* Navbar Colors */
+
+            topNavColor: #33333D,
+            sideNavColor: #373740,
+            navTopLogo: #09FFAD, 
+            sideNavLogo: #09FFAD, 
+            sideNavTextColor: #09FFAD,
+            topNavTextColor: #09FFAD, 
+
+            /* Button Colors */
+
+              buttonBorderColor: #09FFAD,
+              buttonTextColor: #33333D,
+
+              buttonDefaultColor: #8CD2FF,
+              buttonDefaultColorHover: #8CF0FF,
+              buttonDefaultTextHover: #33333D,
+
+              buttonDangerColor: #FF6F6F,
+              buttonDangerColorHover: #FF8888,
+              buttonDangerTextHover: #33333D,
+
+              buttonSuccessColor: #09FFAD,
+              buttonSuccessColorHover: #A2FFE0,
+              buttonSuccessTextHover: #33333D,
+
+              buttonAlertColor: #F4FF96,
+              buttonAlertColorHover: #F9FFC0,
+              buttonAlertTextHover: #33333D,
+
+              buttonBeakerColor: #09FFAD,
+              buttonBeakerColorHover: #A2FFE0,
+              buttonBeakerTextHover: #33333D,
+
+            /* Input Colors */
+
+              inputBorderColor: #09FFAD,
+              inputTextColor: #09FFAD,
+              inputFillColor: transparent,
+
+            /* Acordian */
+
+              acordianBorderColor: #09FFAD,
+              acordianBackgroundColorTop: #33333D,
+              acordianBackgroundHoverTop: #373740,
+              acordianBodyColor: #545756,
+              acordianBodyTextColor: #09FFAD,
+              acordianTitleTextColor: #09FFAD,
+
+            /* Cards */
+
+              cardHeaderColor: #6E7A88,
+              cardBorderColor: #6E7A88,
+              cardHeaderTextColor: #09FFAD,
+              cardBackground: #545756,
+              cardBodyTextColor: #09FFAD,
+
+            /* Results */
+
+              answerBox: #33333D,
+              answerBoxBorder: #09FFAD,
+              answerBoxTextColor: #09FFAD,
+              answerCircle: #33333D,
+              answerCircleBorder: #09FFAD,
+              answerCircleTextColor: #09FFAD,
+              resultCircle: #33333D, 
+              resultCircleTextColor: #09FFAD,
         ),
 
         outrun: (
-                backgroundColor: #261447,
-                textColor: #2DE2E6,
-                acordianTextColor: #2DE2E6,
-                acordianDropDown: #0C0221,
-                buttonTextColor: #2DE2E6,
-                buttonColor: #0C0221,
-                buttonBorderColor: #2DE2E6,
-                sideNavColor: #F6019D,
-                topNavColor: #2DE2E6,
-                topNavHover: #373740,
 
-                  beaker: #0C0221,
-                  beakerHover: #0F0328,
-                  success: #0C0221,
-                  successHover: #0F0328,
-                  alert: #0C0221,
-                  alertHover: #0F0328,
-                  danger: #0C0221,
-                  dangerHover: #0F0328,
-                  default: #0C0221,
-                  defaultHover: #0F0328,
+          /* background */
+
+            background: #261447,
+            textColor: #2DE2E6,
+
+          /* CTA */ 
+
+            ctaBorder: #F6019D,
+            ctaBackground: #0C0221,
+            ctaIcon: #F6019D,
+
+          /* Navbar Colors */
+
+            topNavColor: #2DE2E6,
+            sideNavColor: #F6019D,
+            navTopLogo: #261447, 
+            sideNavLogo: #261447, 
+            sideNavTextColor: #261447,
+            topNavTextColor: #261447, 
+
+            /* Button Colors */
+
+              buttonBorderColor: #F6019D,
+              buttonTextColor: #2DE2E6,
+
+              buttonDefaultColor: #0C0221,
+              buttonDefaultColorHover: #1A0545,
+              buttonDefaultTextHover: #33333D,
+
+              buttonDangerColor: #0C0221,
+              buttonDangerColorHover: #1A0545,
+              buttonDangerTextHover: #33333D,
+
+              buttonSuccessColor: #0C0221,
+              buttonSuccessColorHover: #1A0545,
+              buttonSuccessTextHover: #33333D,
+
+              buttonAlertColor: #0C0221,
+              buttonAlertColorHover: #1A0545,
+              buttonAlertTextHover: #33333D,
+
+              buttonBeakerColor: #0C0221,
+              buttonBeakerColorHover: #1A0545,
+              buttonBeakerTextHover: #33333D,
+
+            /* Input Colors */
+
+              inputBorderColor: #F6019D,
+              inputTextColor: #2DE2E6,
+              inputFillColor: transparent,
+
+            /* Acordian */
+
+              acordianBorderColor: #F6019D,
+              acordianBackgroundColorTop: #0F0328,
+              acordianBackgroundHoverTop: #1A0545,
+              acordianBodyColor: #1B0940,
+              acordianBodyTextColor: #2DE2E6,
+              acordianTitleTextColor: #2DE2E6,
+
+            /* Cards */
+
+              cardHeaderColor: #F6019D,
+              cardBorderColor: #F6019D,
+              cardHeaderTextColor: #0C0221,
+              cardBackground: #0C0221,
+              cardBodyTextColor: #2DE2E6,
+
+            /* Results */
+
+              answerBox: #0C0221,
+              answerBoxBorder: #F6019D,
+              answerBoxTextColor: #2DE2E6,
+              answerCircle: #0C0221,
+              answerCircleBorder: #F6019D,
+              answerCircleTextColor: #2DE2E6,
+              resultCircle: #0C0221, 
+              resultCircleTextColor: #2DE2E6,
         ),
-        
 );
 
 /*

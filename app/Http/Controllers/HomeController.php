@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Charts;
+use App\User;
+use App\Answer;
+use DB;
 
 class HomeController extends Controller
 {
@@ -23,6 +27,21 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $users = Answer::where(DB::raw("(DATE_FORMAT(created_at,'%Y'))"),date('Y'))
+                    ->get();
+        $chart = Charts::database($users, 'bar', 'highcharts')
+                  ->title("Monthly new Register Users")
+                  ->elementLabel("Total Users")
+                  ->dimensions(1000, 500)
+                  ->responsive(true)
+                  ->groupByMonth(date('Y'), true);
+
+        return view('home', ['chart' => $chart]);
+    }
+
+    public function theme(User $user)
+    {
+        dd($user);
+        return redirect('/');
     }
 }

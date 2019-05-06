@@ -2,11 +2,12 @@
 
 .card {
   @include themify($themes) {
-  border: 2px solid themed('sideNavColor');
+  border: 2px solid themed('cardBorderColor');
+  background: themed('cardBackground');
   &__title {
     padding: 3px 20px;
-    background: themed('sideNavColor');
-    color: themed('sideNavColor');
+    background: themed('cardHeaderColor');
+    color: themed('cardHeaderTextColor');
     &.with-button {
       display: flex;
       align-items: center;

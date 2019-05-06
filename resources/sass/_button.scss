@@ -4,8 +4,8 @@
   @include themify($themes) {
     padding: 0.85em 1.4em;
     margin: 0.5em 0.2em;
-    color: themed('acordianTextColor');
-    border: 2px solid themed('sideNavColor');
+    color: themed('buttonTextColor');
+    border: 2px solid themed('buttonBorderColor');
 
     &.small {
       font-size: 0.7rem;

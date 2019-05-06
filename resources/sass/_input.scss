@@ -35,4 +35,9 @@
     margin: 0;
     }
   }
+  &__color {
+  @include themify($themes) {
+  color: themed('textColor');
+  }
+  }
 }

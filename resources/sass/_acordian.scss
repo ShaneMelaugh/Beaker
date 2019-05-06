@@ -2,8 +2,8 @@
 
 .accordion {
   @include themify($themes) {
-  background-color: themed('topNavColor');
-  color: themed('acordianTextColor');
+  background-color: themed('acordianBackgroundColorTop');
+  color: themed('acordianTitleTextColor');
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -11,15 +11,15 @@
   outline: none;
   font-size: 15px !important;
   transition: 0.4s;
-  border: 2px solid themed('sideNavColor');
+  border: 2px solid themed('acordianBorderColor');
   display: flex;
   align-items: center;
   &:hover {
-    background-color: themed('topNavHover');
+    background-color: themed('acordianBackgroundHoverTop');
   }
   &:after {
     content: '\002B';
-    color: themed('buttonTextColor');
+    color: themed('acordianTitleTextColor');
     font-weight: bold;
     float: right;
     margin: 0 0 0 auto;
@@ -27,12 +27,12 @@
 
   &:active:after {
     content: "\2212";
-    border-bottom: 2px solid themed('sideNavColor');
+    border-bottom: 2px solid themed('acordianBorderColor');
   }
 
   &__panel {
-    background-color: themed('acordianDropDown');
-    color: themed('acordianTextColor');
+    background-color: themed('acordianBodyColor');
+    color: themed('acordianBodyTextColor');
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;

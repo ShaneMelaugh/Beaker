@@ -8,6 +8,8 @@ use App\Question;
 use App\Test;
 use App\Answer;
 use App\User;
+use Charts;
+use DB;
 
 class DashboardController extends Controller
 {
@@ -22,6 +24,6 @@ class DashboardController extends Controller
             ['owner_id', auth()->id()]
         ])->get();
         //dd($tests);
-        return view('welcome', compact('tests'));
+        return view('welcome', compact('tests, users'));
     }
 }

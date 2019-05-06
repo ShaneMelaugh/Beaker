@@ -2,3 +2,11 @@
   border: none !important;
   pointer-events: none;
 }
+
+.answer {
+	@include themify($themes) { 
+	&__label {
+		color: themed('textColor');
+	}
+	}
+}

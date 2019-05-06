@@ -69,7 +69,7 @@ class TestsController extends Controller
         {
             //abort_if(\Gate::denies('update', $test), 403);
             $test->destroy();
-            return redirect('/tests');
+            return redirect('/test');
         }
 
 }

@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    {!! Charts::assets() !!}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beaker Style Guide</title>
@@ -18,7 +19,14 @@
 
     <section class="navwrap app-container">
         <div class="navbar__corner">
-            <img src="../img/logo.svg" class="navbar__corner--logo">
+            <svg class="navbar__logo navbar__logo--img" width="112px" height="150px" viewBox="0 0 112 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="iPhone-8" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" transform="translate(4.000000, 5.000000)">
+            <path class="navbar__logo--stroke" d="M75,9 L75,42.3501729 C92.1822666,50.837801 104,68.5388107 104,89 C104,117.718807 80.718807,141 52,141 C23.281193,141 0,117.718807 0,89 C0,68.5388107 11.8177334,50.837801 28.999996,42.3501749 L29,9 L27.5,9 C25.0147186,9 23,6.98528137 23,4.5 C23,2.01471863 25.0147186,4.56538782e-16 27.5,0 L77.5,0 C79.9852814,-4.56538782e-16 82,2.01471863 82,4.5 C82,6.98528137 79.9852814,9 77.5,9 L75,9 Z" id="Combined-Shape" stroke-width="5"></path>
+            <path class="navbar__logo--fill" d="M8,91 L96,91 C95.1777439,114.592474 75.7929365,133.465918 52,133.465918 C28.2070635,133.465918 8.82225607,114.592474 8.00000033,91.0000093 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </svg>
         </div>
 
         <div class="navbar__top">

@@ -12,6 +12,8 @@
 */
 
 Route::get('/', 'DashboardController@index');
+Route::get('/', 'ChartController@userChart');
+Route::get('/theme', 'HomeController@theme');
 
 Route::resource('tests', 'TestsController');
 
