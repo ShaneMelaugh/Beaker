@@ -21,49 +21,39 @@ class ResultsController extends Controller
 
     }
 
-    public function results($test_id, Request $request)
+    public function results(Test $test)
     {
-        //dd(request());
-        //$answers = Answer::all();
-        //$questions = Question::all();
-        //$tests = Test::all();
-        //$users = User::all();
-//      $results = Results::all();
-
-//      $results = Results::get('testAnswer');
-//      print_r($request->input('testAnswer'));
-
-        $results = Results::where([
+    	//dd(request());
+    	//$answers = Answer::all();
+    	//$questions = Question::all();
+    	//$tests = Test::all();
+    	//$users = User::all();
+    	//$results = Results::all();
+    	$results = Results::where([
             ['owner_id', auth()->id()],
-            ['test_id', $test_id]
+            ['test_id', $test->id]
         ])->get();
         //dd($results);
-        
-        
+    	
         $answers_id = $results->pluck('answer_id')->all();
-        $answers = Answer::whereIn('id',$answers_id)->get();
+    	$answers = Answer::whereIn('id',$answers_id)->get();
         //dd($answers);
-//      print_r($answers );
-//      exit;
-        
+    	
         $questions_id = $answers->pluck('question_id')->all();
-        $questions = Question::whereIn('id',$questions_id)->get();
+    	$questions = Question::whereIn('id',$questions_id)->get();
         
         // $tests_id = $questions->pluck('tests_id')->all();
         // $tests = Test::whereIn('id',$tests_id)->get();
 
-if ($request->isMethod("POST")){
         //$answers = Answer::whereIn('question_id',$answers_id)->get();
-        $question = Answer::findOrFail(request('answer'))->question;
-        
+    	$question = Answer::findOrFail(request('testAnswer'))->question;
         //dd(request()->all());
-        Results::create([
-            'test_id' => $test_id,
-            'question_id' => $question->id,
-            'answer_id' => request('answer'),
-            'owner_id'=> auth()->id(),
+    	Results::create([
+        	'test_id' => $test->id,
+        	'question_id' => $question->id,
+        	'answer_id' => request('testAnswer'),
+        	'owner_id'=> auth()->id(),
         ]);
-    }
         //dd(request());
         return view('tests.results', compact('answers', 'results', 'questions', 'users'));
     }
@@ -120,7 +110,7 @@ if ($request->isMethod("POST")){
      */
     public function update()
     {
-        //
+    	//
     }
 
     /**

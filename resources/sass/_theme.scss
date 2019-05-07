@@ -7,6 +7,13 @@
   width: 70px;
 }
 
+.theme {
+  &__switchButton {
+    background: transparent !important;
+    width: auto;
+  }
+}
+
 $themes: (
         beaker: (
 
@@ -170,6 +177,10 @@ $themes: (
               answerCircleTextColor: #151515,
               resultCircle: #C7C7C7, 
               resultCircleTextColor: #151515,
+
+            /* Test */
+              
+              testButtonColor: #151515, 
         ),
 
         dark: (
@@ -252,6 +263,10 @@ $themes: (
               answerCircleTextColor: #09FFAD,
               resultCircle: #33333D, 
               resultCircleTextColor: #09FFAD,
+
+            /* Test */
+              
+              testButtonColor: #09FFAD,  
         ),
 
         outrun: (
@@ -334,6 +349,96 @@ $themes: (
               answerCircleTextColor: #2DE2E6,
               resultCircle: #0C0221, 
               resultCircleTextColor: #2DE2E6,
+
+            /* Test */
+              
+              testButtonColor: #2DE2E6,
+        ),
+
+        dyslexia: (
+
+          /* background */
+
+            background: #FBFBD3,
+            textColor: #D95815,
+
+          /* CTA */ 
+
+            ctaBorder: #C6E9FD,
+            ctaBackground: #002A5B,
+            ctaIcon: #C6E9FD,
+
+          /* Navbar Colors */
+
+            topNavColor: #C6E9FD,
+            sideNavColor: #002A5B,
+            navTopLogo: #002A5B, 
+            sideNavLogo: #C6E9FD, 
+            sideNavTextColor: #D4DDD8,
+            topNavTextColor: #B3A17E, 
+
+            /* Button Colors */
+
+              buttonBorderColor: #D95718,
+              buttonTextColor: #FBFBD3,
+
+              buttonDefaultColor: #D95718,
+              buttonDefaultColorHover: #D95718,
+              buttonDefaultTextHover: #D95718,
+
+              buttonDangerColor: #D95718,
+              buttonDangerColorHover: #D95718,
+              buttonDangerTextHover: #D95718,
+
+              buttonSuccessColor: #D95718,
+              buttonSuccessColorHover: #D95718,
+              buttonSuccessTextHover: #D95718,
+
+              buttonAlertColor: #D95718,
+              buttonAlertColorHover: #D95718,
+              buttonAlertTextHover: #D95718,
+
+              buttonBeakerColor: #D95718,
+              buttonBeakerColorHover: #D95718,
+              buttonBeakerTextHover: #D95718,
+
+            /* Input Colors */
+
+              inputBorderColor: #D95718,
+              inputTextColor: #D95718,
+              inputFillColor: transparent,
+
+            /* Acordian */
+
+              acordianBorderColor: #002A5B,
+              acordianBackgroundColorTop: #C6E9FD,
+              acordianBackgroundHoverTop: #C6E9FD,
+              acordianBodyColor: #FFFFFF,
+              acordianBodyTextColor: #B3A17E,
+              acordianTitleTextColor: #B3A17E,
+
+            /* Cards */
+
+              cardHeaderColor: #C6E9FD,
+              cardBorderColor: #C6E9FD,
+              cardHeaderTextColor: #B3A17E,
+              cardBackground: #FFFFFF,
+              cardBodyTextColor: #B3A17E,
+
+            /* Results */
+
+              answerBox: #D95718,
+              answerBoxBorder: #C6E9FD,
+              answerBoxTextColor: #FBFBD3,
+              answerCircle: #D95718,
+              answerCircleBorder: #C6E9FD,
+              answerCircleTextColor: #FBFBD3,
+              resultCircle: #D95718, 
+              resultCircleTextColor: #FBFBD3,
+
+            /* Test */
+              
+              testButtonColor: #D95718,
         ),
 );
 

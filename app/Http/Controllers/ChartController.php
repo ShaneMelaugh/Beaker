@@ -15,25 +15,34 @@ class ChartController extends Controller
 {
     public function userChart()
     {
-        $users = User::where(DB::raw("(DATE_FORMAT(created_at,'%Y'))"),date('Y'))
+        $users = Test::where(DB::raw("(DATE_FORMAT(created_at,'%Y'))"),date('Y'))
                     ->get();
         $userChart = Charts::database($users, 'line', 'highcharts')
-                  ->title("Monthly new Register Users")
-                  ->elementLabel("Total Users")
+                  ->title("Monthly Tests Made")
+                  ->elementLabel("Total Tests")
                   ->dimensions(1000, 500)
                   ->responsive(true)
                   ->groupByMonth(date('Y'), true);
 
-        $tests = Test::where(DB::raw("(DATE_FORMAT(created_at,'%Y'))"),date('Y'))
+        $tests = Answer::where(DB::raw("(DATE_FORMAT(created_at,'%Y'))"),date('Y'))
                     ->get();
         $testChart = Charts::database($tests, 'pie', 'highcharts')
-                  ->title("Tests Created")
-                  ->elementLabel("Total Users")
+                  ->title("Answers Assigned")
+                  ->elementLabel("Total Answers")
+                  ->dimensions(1000, 500)
+                  ->responsive(true)
+                  ->groupByMonth(date('Y'), true);
+
+        $questions = Question::where(DB::raw("(DATE_FORMAT(created_at,'%Y'))"),date('Y'))
+                    ->get();
+        $questionChart = Charts::database($questions, 'bar', 'highcharts')
+                  ->title("Questions Assigned")
+                  ->elementLabel("Total Questions")
                   ->dimensions(1000, 500)
                   ->responsive(true)
                   ->groupByMonth(date('Y'), true);
 
 
-        return view('welcome', compact('userChart', 'testChart'));
+        return view('welcome', compact('userChart', 'testChart', 'questionChart'));
     }
 }

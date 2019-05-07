@@ -34,3 +34,11 @@
     }
 	}
 }
+
+@media only screen and (max-width: 990px) {
+	.dashboard__section {
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr;
+	}
+
+ }

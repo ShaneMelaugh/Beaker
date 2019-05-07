@@ -4,7 +4,7 @@
 
 @section('content') 
 
-<h3>{{ $test->title }}</h3><h3 class="questionCount"></h3>
+<h3>{{ $test->title }}</h3><h5 class="questionCount"></h5><h5>Questions</h5>
 
 <p>{{ $test->description }}</p>
 

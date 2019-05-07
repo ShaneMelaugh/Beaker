@@ -1,0 +1,70 @@
+.highcharts-background {
+	@include themify($themes) {
+		fill: themed('cardBackground');
+	}
+}
+
+.highcharts-axis-labels text {
+	@include themify($themes) {
+		fill: themed('cardBodyTextColor') !important;
+	}
+}
+
+.highcharts-title text {
+	@include themify($themes) {
+		fill: themed('cardBodyTextColor') !important;
+	}
+}
+
+.highcharts-tick {
+		@include themify($themes) {
+		stroke: themed('cardBodyTextColor') !important;
+	}
+}
+
+.highcharts-grid-line {
+		@include themify($themes) {
+		stroke: themed('background') !important;
+	}
+}
+
+.highcharts-axis-line {
+		@include themify($themes) {
+		stroke: themed('cardBodyTextColor') !important;
+	}
+}
+
+.highcharts-title tspan {
+		@include themify($themes) {
+		fill: themed('cardBodyTextColor') !important;
+	}
+}
+
+.highcharts-point {
+		@include themify($themes) {
+		fill: themed('cardBodyTextColor') !important;
+	}
+}
+
+.highcharts-graph {
+		@include themify($themes) {
+		stroke: themed('cardBodyTextColor') !important;
+	}
+}
+
+.highcharts-pie-series  {
+			@include themify($themes) {
+		stroke: themed('cardBodyTextColor') !important;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

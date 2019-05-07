@@ -32,7 +32,7 @@ Route::patch('/questions/{question}', 'TestQuestionsController@update');
 Route::post('/questions/{question}/answer', 'TestQuestionsController@answers');
 Route::patch('/answer/{answer}', 'AnswerController@update');
 Route::get('/tests/{test}/takeTest', 'TestQuestionsController@takeTest');
-Route::post('/tests/{test}/results', 'ResultsController@results');
+Route::any('/tests/{test}/results', 'ResultsController@results');
 Route::get('/google_pie_chart', 'LaravelGoogleGraphController@index');
 
 

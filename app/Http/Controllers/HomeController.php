@@ -27,16 +27,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = Answer::where(DB::raw("(DATE_FORMAT(created_at,'%Y'))"),date('Y'))
-                    ->get();
-        $chart = Charts::database($users, 'bar', 'highcharts')
-                  ->title("Monthly new Register Users")
-                  ->elementLabel("Total Users")
-                  ->dimensions(1000, 500)
-                  ->responsive(true)
-                  ->groupByMonth(date('Y'), true);
-
-        return view('home', ['chart' => $chart]);
+        return view('home');
     }
 
     public function theme(User $user)

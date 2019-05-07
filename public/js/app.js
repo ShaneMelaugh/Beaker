@@ -47988,24 +47988,6 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-$("#hamburger").click(function () {
-  $(".content").toggleClass('content__collapse');
-  $(".navbar__left").animate({
-    width: "toggle"
-  });
-});
-
-function resize() {
-  if ($(window).width() > 820) {
-    $('.navbar__left').css('display', 'block');
-    $(".content").removeClass('content__collapse');
-  }
-}
-
-$(document).ready(function () {
-  $(window).resize(resize);
-  resize();
-});
 $(document).ready(function () {
   $('#dark').click(function () {
     $('#app-root').removeClass();
@@ -48033,6 +48015,13 @@ $(document).ready(function () {
     $('#app-root').addClass('theme-outrun');
     localStorage.clear();
     localStorage.setItem('theme', ['theme-outrun']);
+    localStorage.getItem('theme');
+  });
+  $('#dyslexia').click(function () {
+    $('#app-root').removeClass();
+    $('#app-root').addClass('theme-dyslexia');
+    localStorage.clear();
+    localStorage.setItem('theme', ['theme-dyslexia']);
     localStorage.getItem('theme');
   });
   var localItem = localStorage.getItem('theme');
@@ -48103,32 +48092,17 @@ $(".test__search").on("keyup", function () {
     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
   });
 });
+$('.testCount').css('margin-left', '20px'); //$('.questionCount').css('margin-left', '20px');
+
 var testItems = $('.testWrap').length;
 $('.testCount').append(testItems);
 var resultsItems = $('.results__answer').length;
 $('.results__total--number').append(resultsItems);
+var resultsCorrect = $('.1').length;
+$('.results__total--correct').append(resultsCorrect);
 var questionItems = $('.acordian').length;
 console.log(questionItems);
-$('.questionCount').append(questionItems + "Questions"); //Scroll for Test
-// $(document).ready(function(){
-//   $('.results__answer').addClass('incorrect');
-//   $('.results__answer--mark').html('<i class="far fa-times-circle"></i>');
-//   console.log('wrong');
-// });
-// $(document).ready(function(){
-// $(".result__answer").each(function() {
-// if (!$(this).attr("id") == "0") {
-// $(this).find(".results__answer").addClass("incorrect");
-//     }
-// });
-// });
-// $(document).ready(function(){
-// $('.results__answer').filter(function(){
-// return $(this).has('#0').length > 0
-// }).each(function(){
-// $(this).addClass('incorrect');
-// });
-// });
+$('.questionCount').append(questionItems); //Scroll for Test
 
 $(document).ready(function () {
   if ($('.results__answer').attr("id") == "1") {
@@ -48139,18 +48113,25 @@ $(document).ready(function () {
     $('.results__answer').addClass('incorrect');
   }
 });
-$(doucment).ready(function () {
-  $("#test-answers").submit(function (stay) {
+$(document).ready(function () {
+  $('.test__button').click(function () {
+    var test_id = $(this).attr('tid');
+    var question_id = $(this).attr('qid');
+    var v = $(this).attr('value');
+    $("#test-" + test_id + "-" + question_id + "-answer").val(v);
+  });
+  $(".test-answers").submit(function (stay) {
     var formdata = $(this).serialize(); // here $(this) refere to the form its submitting
 
+    console.log('formdata=>');
+    console.log(formdata);
+    var test_id = $(this).attr('test_id');
     $.ajax({
       type: 'POST',
-      url: "/tests/{{ $test->id }}/results",
+      url: "/tests/" + test_id + "/results",
       data: formdata,
       // here $(this) refers to the ajax object not form
-      success: function success(data) {
-        alert();
-      }
+      success: function success(data) {}
     });
     stay.preventDefault();
   });

@@ -5,107 +5,51 @@
 @section('content') 
 
 
-<div class="theme">
+<div class="theme__item">
 	<section class="theme__picker">
 
-		<form method="POST" class="theme__item" action="/theme">
-			@method('PATCH')
-            @csrf
+			<div class="theme__item">
 			<div class="theme__item--text">
 				<h3 class="theme__item--title">World of Light</h3>
-				<p class="theme__item--para">A great theme for people who still use light theme for some ungodly reason, just ignore this and use dark please</p>
+				<p class="theme__item--para">A nice Light theme for those who enjoy a brighter screen, and something easier to see in the sunlight</p>
 			</div>
-			<button type="submit" id="theme-light" name="theme-light"><img src="../../images/light.svg" class="theme__item--img"/></button>
-		</form>
+			<img src="../../images/light.svg" class="theme__item--img" id="light"/>
+		</div>
 		<hr>
 
 				<div class="theme__item">
 			<div class="theme__item--text">
 				<h3 class="theme__item--title">The Long Night</h3>
-				<p class="theme__item--para">The perfect theme, you'd be insane to not choose this sweet thing</p>
+				<p class="theme__item--para">Dark theme with green lettering, ideal for those who don't like the bright lights of a light theme</p>
 			</div>
-			<img src="../../images/dark.svg" class="theme__item--img"/>
+			<img src="../../images/dark.svg" class="theme__item--img" id="dark"/>
 		</div>
 		<hr>
 
 				<div class="theme__item">
 			<div class="theme__item--text">
 				<h3 class="theme__item--title">Beaker</h3>
-				<p class="theme__item--para">The standard issue beans, a very normal theme that serves a very normal purpose</p>
+				<p class="theme__item--para">The default theme, great for normal purposes if you can't choose between light and dark</p>
 			</div>
-			<img src="../../images/beaker.svg" class="theme__item--img"/>
+			<img src="../../images/beaker.svg" class="theme__item--img" id="beaker"/>
 		</div>
 		<hr>
 
-				<div class="theme__item">
-			<div class="theme__item--text">
-				<h3 class="theme__item--title">Dyslexia #1</h3>
-				<p class="theme__item--para">The standard issue beans, a very normal theme that serves a very normal purpose</p>
-			</div>
-			<img src="../../images/beaker.svg" class="theme__item--img"/>
-		</div>
-		<hr>
-
-				<div class="theme__item">
-			<div class="theme__item--text">
-				<h3 class="theme__item--title">Dyslexia #2</h3>
-				<p class="theme__item--para">The standard issue beans, a very normal theme that serves a very normal purpose</p>
-			</div>
-			<img src="../../images/beaker.svg" class="theme__item--img"/>
-		</div>
-		<hr>
-
-				<div class="theme__item">
-			<div class="theme__item--text">
-				<h3 class="theme__item--title">Colourblind #1</h3>
-				<p class="theme__item--para">The standard issue beans, a very normal theme that serves a very normal purpose</p>
-			</div>
-			<img src="../../images/beaker.svg" class="theme__item--img"/>
-		</div>
-		<hr>
-
-				<div class="theme__item">
-			<div class="theme__item--text">
-				<h3 class="theme__item--title">Colourblind #2</h3>
-				<p class="theme__item--para">The standard issue beans, a very normal theme that serves a very normal purpose</p>
-			</div>
-			<img src="../../images/beaker.svg" class="theme__item--img"/>
-		</div>
-		<hr>
-
-				<div class="theme__item">
-			<div class="theme__item--text">
-				<h3 class="theme__item--title">Seaside Blue</h3>
-				<p class="theme__item--para">The standard issue beans, a very normal theme that serves a very normal purpose</p>
-			</div>
-			<img src="../../images/beaker.svg" class="theme__item--img"/>
-		</div>
-		<hr>
-
-				<div class="theme__item">
-			<div class="theme__item--text">
-				<h3 class="theme__item--title">Beans on Toast</h3>
-				<p class="theme__item--para">The standard issue beans, a very normal theme that serves a very normal purpose</p>
-			</div>
-			<img src="../../images/beaker.svg" class="theme__item--img"/>
-		</div>
-		<hr>
-
-				<div class="theme__item">
+						<div class="theme__item">
 			<div class="theme__item--text">
 				<h3 class="theme__item--title">Cyberpunk</h3>
-				<p class="theme__item--para">The standard issue beans, a very normal theme that serves a very normal purpose</p>
+				<p class="theme__item--para">A retro/vaporwave feel that makes you feel like you're wandering the vagabond city of Neo Tokyo</p>
 			</div>
-			<img src="../../images/beaker.svg" class="theme__item--img"/>
+			<img src="../../images/beaker.svg" class="theme__item--img" id="outrun"/>
 		</div>
 		<hr>
 
-			<div class="theme__item">
+				<div class="theme__item">
 			<div class="theme__item--text">
-				<h3 class="theme__item--title">Vaporwave</h3>
-				<p class="theme__item--para">The standard issue beans, a very normal theme that serves a very normal purpose</p>
+				<h3 class="theme__item--title">Dyslexia</h3>
+				<p class="theme__item--para">Theme using Dyslexia standard colours, to make things easier for people with Dyslexia</p>
 			</div>
-			<img src="../../images/beaker.svg" class="theme__item--img"/>
+			<img src="../../images/beaker.svg" class="theme__item--img" id="dyslexia"/>
 		</div>
 		<hr>
 		
@@ -152,85 +96,9 @@
 				</optgroup>
 	            </select>
 	        </label>
-
-	        <label class="text__font">Weight
-	            <select id="font-weight" class="input input__dropdown beaker__border">
-	                <option value="400">Light</option>
-	                <option value="600">Medium</option>
-	                <option value="700">Heavy</option>
-	                <option value="900">Black</option>
-	            </select>
-	        </label>
-
-	        <label class="text__font">Line Height
-	            <select id="font-height" class="input input__dropdown beaker__border">
-	                <option value="1.5">1.5</option>
-	                <option value="2">2</option>
-	                <option value="3.5">2.5</option>
-	                <option value="3">3</option>
-	            </select>
-	        </label>
-
 	    </div>
 
 		<p class="text__para">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
-		<div class="text__title">
-			<label class="text__font--para">Font
-	            <select id="font-choice-para" class="input input__dropdown beaker__border">
-	        	<optgroup label="Sans-Serif">
-	        	<option id="Roboto Mono" value="Roboto Mono">Roboto Mono (Default Font)</option>
-	        	<option id="proxima-nova" value="proxima-nova">Proxima Nova</option>
-	        	<option id="brandon-grotesque" value="brandon-grotesque">Brandon Grotesque</option>
-	        	<option id="futura-pt" value="futura-pt">Futura PT</option>
-	        	<option id="agenda" value="agenda">Agenda</option>
-	        	<option id="farm-new" value="farm-new">Farm New</option>
-	        	<option id="bebas-neue-rounded" value="bebas-neue-rounded">Bebas Neue Rounded</option>
-	        	<option id="covik-sans" value="covik-sans">Covik Sans</option>
-				</optgroup>
-
-	        	<optgroup label="Serif">
-	        	<option id="acuta" value="acuta">Acuta</option>
-	        	<option id="starling" value="starling">Starling</option>
-	        	<option id="gelo" value="gelo">Gelo</option>
-	        	<option id="Times New Roman" value="Times New Roman">Times New Roman</option>
-				</optgroup>
-
-				<optgroup label="Script/Handwriting">
-	        	<option id="ff-providence-web-pro" value="ff-providence-web-pro">FF Providence Pro</option>
-	        	<option id="fertigo-script" value="fertigo-script">Fertigo Pro Script</option>
-	        	<option id="caflisch-script-pro" value="caflisch-script-pro">Caflisch Script Pro</option>
-	        	<option id="gooddog-new" value="gooddog-new">GoodDog New</option>
-	        	<option id="blambot-fx-pro" value="blambot-fx-pro">Blambot FX Pro</option>
-	        	<option id="sketchnote-text" value="sketchnote-text">Sketchnote Text</option>
-	        	<option id="sketchnote-square" value="sketchnote-square">Sketchnote Square</option>
-	        	<option id="chantal" value="chantal">Chantal</option>
-	        	<option id="voltage" value="voltage">Voltage</option>
-				</optgroup>
-				
-				<optgroup label="Dyslexia Friendly">
-	        	<option id="OpenDyslexic" value="OpenDyslexic">OpenDyslexic</option>
-				</optgroup>
-	            </select>
-	        </label>
-
-	        <label class="text__font--para">Weight
-	            <select id="font-weight-para" class="input input__dropdown beaker__border">
-	                <option value="400">Light</option>
-	                <option value="600">Medium</option>
-	                <option value="700">Heavy</option>
-	                <option value="900">Black</option>
-	            </select>
-	        </label>
-
-	        <label class="text__font--para">Line Height
-	            <select id="font-height-para" class="input input__dropdown beaker__border">
-	                <option value="1.5">1.5</option>
-	                <option value="2">2</option>
-	                <option value="3.5">2.5</option>
-	                <option value="3">3</option>
-	            </select>
-	        </label>
-	        </div
 
 		<div class="card">
             <div class="card__title">
