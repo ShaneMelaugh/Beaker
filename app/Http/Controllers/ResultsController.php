@@ -24,14 +24,11 @@ class ResultsController extends Controller
     public function results($test_id, Request $request)
     {
         //dd(request());
-        //$answers = Answer::all();
-        //$questions = Question::all();
-        //$tests = Test::all();
-        //$users = User::all();
-//      $results = Results::all();
-
-//      $results = Results::get('testAnswer');
-//      print_r($request->input('testAnswer'));
+        $answers = Answer::all();
+        $questions = Question::all();
+        $tests = Test::all();
+        $users = User::all();
+     $results = Results::all();
 
         $results = Results::where([
             ['owner_id', auth()->id()],

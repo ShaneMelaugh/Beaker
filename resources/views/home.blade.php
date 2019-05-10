@@ -26,7 +26,6 @@
                                 </button>
                             </div>
                         </div>
-                        {!! $chart->html() !!}
                     </div>
                     </div>
 
@@ -35,6 +34,4 @@
         </div>
     </div>
 </div>
-{!! Charts::scripts() !!}
-{!! $chart->script() !!}
 @endsection
